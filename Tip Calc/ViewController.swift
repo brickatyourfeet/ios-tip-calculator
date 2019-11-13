@@ -25,6 +25,8 @@ class ViewController: UIViewController {
         var tipPercentageDouble = Double(tipPercentage.text!)!
         
         var tipDouble = billDouble * (tipPercentageDouble / 100)
+        
+        tipAmount.text = "Tip: $\(tipDouble)"
     }
     
 }

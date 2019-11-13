@@ -10,11 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var totalBill: UITextField!
+    @IBOutlet weak var tipPercentage: UITextField!
+    @IBOutlet weak var tipAmount: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func calculateTipPressed(_ sender: UIButton) {
+        
+        var billDouble = Double(totalBill.text!)!
+        var tipPercentageDouble = Double(tipPercentage.text!)!
+        
+        var tipDouble = billDouble * (tipPercentageDouble / 100)
+    }
+    
 }
 
